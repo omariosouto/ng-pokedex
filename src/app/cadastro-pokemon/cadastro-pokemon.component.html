@@ -1,0 +1,16 @@
+<section class="container">
+  <h2 class="text-center">Cadastro de Pokémon</h2>
+  <form action="" (submit)="cadastrar($event)">
+    <div class="form-group">
+        <label for="nome">Número</label>
+        <input id="nome" type="number" class="form-control" [value]="pokemon.numero" >
+      <label for="nome">Nome</label>
+      <input id="nome" type="text" class="form-control" [value]="pokemon.nome" (input)="pokemon.nome = $event.target.value">
+    </div>
+
+
+    <button class="btn btn-success">Cadastrar!</button>
+
+    <a class="btn btn-warning" [routerLink]="['/']">Voltar para listagem</a>
+  </form>
+</section>
